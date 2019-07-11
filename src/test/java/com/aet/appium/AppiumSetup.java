@@ -15,20 +15,24 @@ import java.net.URL;
  */
 public class AppiumSetup {
 
-    private MobileDriver mobileDriver;
+//    private MobileDriver mobileDriver;
+    private AndroidDriver mobileDriver;
 
     /**
      * Initialize appium server mobile driver.
      *
      * @return the mobile driver
      */
-    public MobileDriver initializeAppiumServer() {
+    public AndroidDriver initializeAppiumServer() {
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability(AndroidMobileCapabilityType.AVD, "Nexus_5X_API_27");
         desiredCapabilities.setCapability(AndroidMobileCapabilityType.PLATFORM_NAME, "Android");
+//        desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "com.test.sample.play.activity.LoginActivity");
+//        desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_DURATION, "80000");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-        desiredCapabilities.setCapability(MobileCapabilityType.APP, "D:\\Aeturnum\\appium-demo\\app-debug.apk");
+//        desiredCapabilities.setCapability(MobileCapabilityType.APP, "D:\\Aeturnum\\appium-demo\\app-debug.apk");
+        desiredCapabilities.setCapability(MobileCapabilityType.APP, "D:\\appmobileTesting.apk");
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         try {
